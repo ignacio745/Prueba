@@ -10,5 +10,5 @@ class User(Base):
     name = Column(String)
     hashed_password = Column(String)
 
-    bookings = relationship("Booking", back_populates="owner")
+    bookings = relationship("Booking", back_populates="owner", cascade="all, delete")
 
