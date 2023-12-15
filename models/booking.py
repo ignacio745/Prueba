@@ -13,4 +13,4 @@ class Booking(Base):
     duration = Column(Time)
     owner_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     
-    owner = relationship("User", back_populates="bookings", cascade="all, delete")
+    owner = relationship("User", back_populates="bookings")
